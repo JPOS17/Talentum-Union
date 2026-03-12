@@ -1,0 +1,140 @@
+/* SHARED BUTTON */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.btn--orange {
+  background: #e8722a;
+  color: #fff;
+}
+
+/* HERO */
+.jb-hero {
+  background: linear-gradient(160deg, #1a8c8c 0%, #0d5f6e 100%);
+  padding: 56px 6vw 48px;
+  text-align: center;
+  color: #fff;
+}
+
+.jb-hero__title {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* Search bar */
+.jb-hero__search {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.jb-hero__input {
+  width: clamp(220px, 36vw, 380px);
+  padding: 11px 44px 11px 18px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  outline: none;
+  background: #fff;
+  color: #1a2e3b;
+}
+
+.jb-hero__input::placeholder {
+  color: #9aafb8;
+}
+
+.jb-hero__search-icon {
+  position: absolute;
+  right: 14px;
+  font-size: 1rem;
+  color: #4a6570;
+  pointer-events: none;
+}
+
+.jb-hero__body {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* TABLE SECTION */
+.jb-table-wrap {
+  padding: 40px 6vw 64px;
+  background: #fff;
+  overflow-x: auto;
+}
+
+.jb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Header row */
+.jb-table thead tr {
+  border-bottom: 2px solid #1a8c8c;
+}
+
+.jb-table thead th {
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 700;
+  color: #0d3b5e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+/* Body rows */
+.jb-table tbody tr {
+  border-bottom: 1px solid #e2e8ed;
+  transition: background 0.15s;
+}
+
+.jb-table tbody tr:hover {
+  background: #f4f8fa;
+}
+
+.jb-table tbody td {
+  padding: 18px 20px;
+  color: #3a4a55;
+  vertical-align: middle;
+}
+
+.jb-table__position {
+  font-weight: 600;
+  color: #1a2e3b;
+}
+
+.jb-table__status {
+  color: #4a6570;
+  white-space: nowrap;
+}
+
+.jb-table__empty {
+  text-align: center;
+  color: #7a90a0;
+  padding: 40px 0;
+  font-style: italic;
+}
