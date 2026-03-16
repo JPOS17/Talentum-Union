@@ -10,10 +10,11 @@ import {
 } from "lucide-react";
 
 const coworkersImage =
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80";
+  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
 const handshakeImage =
-  "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&q=80";
+  "https://images.pexels.com/photos/8112186/pexels-photo-8112186.jpeg";
 
+  
 const Home = () => {
   const navigate = useNavigate();
   return (

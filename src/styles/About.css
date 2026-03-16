@@ -1,6 +1,6 @@
 /* INTRO */
 .about-hero {
-  padding: 64px 12vw 56px;
+  padding: 40px 12vw 40px;
   text-align: center;
   background: #fff;
 }
@@ -38,6 +38,7 @@
   align-items: center;
   background: #fff;
   min-height: 340px;
+  margin-bottom: 20px;
 }
 
 .vision__image-wrap {
@@ -81,7 +82,7 @@
 
 .vision__body {
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: 1;
   color: #1a6e7a;
 }
 
@@ -120,7 +121,7 @@
 .values {
   display: flex;
   align-items: flex-start;
-  padding: 64px 6vw;
+  padding: 40px 6vw;
   gap: 32px;
   background: #fff;
   border-top: 3px solid #e8722a;

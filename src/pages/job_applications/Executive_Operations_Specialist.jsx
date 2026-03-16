@@ -1,7 +1,7 @@
 import "../../styles/Job_Applications.css";
 
 const heroImg =
-  "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1200&q=80";
+  "https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg";
 
 const Executive_Operations_Specialist = () => {
   return (

@@ -3,17 +3,17 @@ import { useNavigate, Link } from "react-router-dom";
 import "../styles/SearchTalent.css";
 
 const financeImg =
-  "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&q=80";
+  "https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg";
 const vaImg =
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80";
+  "https://images.pexels.com/photos/8867431/pexels-photo-8867431.jpeg";
 const marketingImg =
-  "https://images.unsplash.com/photo-1551434678-e076c223a692?w=700&q=80";
+  "https://images.pexels.com/photos/3182827/pexels-photo-3182827.jpeg";
 const itImg =
   "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=700&q=80";
 const groupImg =
-  "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80";
+  "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const teamImg =
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80";
+  "https://images.pexels.com/photos/4342124/pexels-photo-4342124.jpeg";
 
 const SearchTalent = () => {
   const navigate = useNavigate();

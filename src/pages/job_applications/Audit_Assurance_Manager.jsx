@@ -1,7 +1,7 @@
 import "../../styles/Job_Applications.css";
 
 const heroImg =
-  "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80";
+  "https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg";
 
 const Audit_Assurance_Manager = () => {
   return (

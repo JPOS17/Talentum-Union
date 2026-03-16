@@ -3,7 +3,7 @@ import { DollarSign, Globe, Users, Zap } from "lucide-react";
 import "../../styles/SearchTalentShared.css";
 
 const heroImg =
-  "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&q=80";
+  "https://images.pexels.com/photos/6779716/pexels-photo-6779716.jpeg";
 
 const benefits = [
   {

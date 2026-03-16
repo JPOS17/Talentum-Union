@@ -1,7 +1,7 @@
 import "../../styles/Job_Applications.css";
 
 const heroImg =
-  "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1200&q=80";
+  "https://images.pexels.com/photos/8927687/pexels-photo-8927687.jpeg";
 
 const Staff_Accountant = () => {
   return (

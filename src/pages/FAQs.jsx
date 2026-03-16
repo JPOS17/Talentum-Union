@@ -3,7 +3,7 @@ import { MessageSquare } from "lucide-react";
 import "../styles/FAQs.css";
 
 const discussingImg =
-  "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80";
+  "https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg";
 
 const workingQuestions = [
   {

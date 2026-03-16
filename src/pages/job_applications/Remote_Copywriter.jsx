@@ -1,7 +1,7 @@
 import "../../styles/Job_Applications.css";
 
 const heroImg =
-  "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80";
+  "https://images.pexels.com/photos/8035295/pexels-photo-8035295.jpeg";
 
 const Remote_Copywriter = () => {
   return (
