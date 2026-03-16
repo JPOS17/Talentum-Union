@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 30px 40px 36px 15vw;
+  padding: 30px 40px 36px 12vw;
 }
 
 .faq-hero__title {
@@ -73,6 +73,8 @@
   gap: 32px;
   padding: 56px 6vw 72px;
   background: #fff;
+  max-width: 1200px;  
+  margin: 0 auto;     
 }
 
 /* Chat bubble icon */
