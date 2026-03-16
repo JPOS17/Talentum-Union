@@ -1,6 +1,51 @@
 import { useState } from "react";
-import { MessageSquare } from "lucide-react";
 import "../styles/FAQs.css";
+
+const FAQBubbleIcon = () => (
+  <svg width="140" height="140" viewBox="0 0 140 160">
+    {/* Layer 1 (bottom): back bubble */}
+    <rect
+      x="36"
+      y="48"
+      width="100"
+      height="80"
+      rx="13"
+      fill="none"
+      stroke="#0d3b5e"
+      strokeWidth="7"
+    />
+    <polygon points="100,128 120,128 120,148" fill="#0d3b5e" />
+
+    {/* Layer 2 (middle): front bubble */}
+    <rect x="4" y="14" width="104" height="84" rx="13" fill="white" />
+    <rect
+      x="4"
+      y="14"
+      width="104"
+      height="84"
+      rx="13"
+      fill="none"
+      stroke="#0d3b5e"
+      strokeWidth="7"
+    />
+    <polygon points="10,98 30,98 10,118" fill="#0d3b5e" />
+
+    {/* Layer 3 (top): question mark */}
+    <text
+      x="56"
+      y="50"
+      textAnchor="middle"
+      fontFamily="'Segoe UI', Arial, sans-serif"
+      fontSize="70"
+      fontWeight="600"
+      fill="#0d3b5e"
+      dominantBaseline="central"
+      style={{ userSelect: "none" }}
+    >
+      ?
+    </text>
+  </svg>
+);
 
 const discussingImg =
   "https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg";
@@ -162,7 +207,7 @@ const FAQs = () => {
 
       <section className="faq-accordion">
         <div className="faq-accordion__icon">
-          <MessageSquare size={72} strokeWidth={1} className="faq-bubble" />
+          <FAQBubbleIcon />
         </div>
 
         <div className="faq-accordion__columns">

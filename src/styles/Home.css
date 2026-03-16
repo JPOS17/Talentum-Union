@@ -76,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 48px 60px 6vw;
+  padding: 40px 48px 60px 10vw;
 }
 
 .hero__title {
@@ -285,7 +285,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 6vw 60px 48px;
+  padding: 40px 8vw 40px 48px;
 }
 
 .process__title {
@@ -294,7 +294,7 @@ body {
   font-weight: 700;
   color: var(--navy);
   line-height: 1.2;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .process__steps {

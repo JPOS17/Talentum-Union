@@ -31,6 +31,15 @@
   box-sizing: border-box;
 }
 
+.cu-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* SIDEBAR */
 .cu-sidebar {
   flex: 0 0 220px;
@@ -54,6 +63,7 @@
   font-size: 0.85rem;
   line-height: 1.75;
   color: rgba(255,255,255,0.92);
+  white-space: nowrap; 
 }
 
 .cu-sidebar__hours-title {
@@ -201,7 +211,7 @@
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
-  .cu-page {
+  .cu-inner {
     gap: 28px;
   }
   .cu-sidebar {
@@ -211,8 +221,10 @@
 
 @media (max-width: 700px) {
   .cu-page {
-    flex-direction: column;
     padding: 24px 5vw 40px;
+  }
+  .cu-inner {
+    flex-direction: column;
     gap: 24px;
   }
   .cu-sidebar {

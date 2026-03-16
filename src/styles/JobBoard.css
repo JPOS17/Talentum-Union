@@ -90,6 +90,8 @@
   padding: 40px 6vw 64px;
   background: #fff;
   overflow-x: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .jb-table {

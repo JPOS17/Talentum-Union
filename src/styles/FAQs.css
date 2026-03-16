@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 48px 40px 36px 6vw;
+  padding: 30px 40px 36px 15vw;
 }
 
 .faq-hero__title {
@@ -45,18 +45,24 @@
   display: block;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .faq-hero {
     flex-direction: column;
     height: auto;
+    max-height: unset;
   }
   .faq-hero__text {
     flex: unset;
+    width: 100%;
     padding: 36px 6vw;
+  }
+  .faq-hero__body {
+    max-width: 100%;
   }
   .faq-hero__image {
     height: 200px;
     flex: unset;
+    width: 100%;
   }
 }
 
@@ -86,7 +92,7 @@
   gap: 0 48px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .faq-accordion__icon {
     display: none; 
   }
