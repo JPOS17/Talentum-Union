@@ -68,13 +68,16 @@
 
 /* ACCORDION SECTION */
 .faq-accordion {
+  background: #fff;
+  padding: 56px 6vw 72px;
+}
+
+.faq-accordion__inner {
   display: flex;
   align-items: flex-start;
   gap: 32px;
-  padding: 56px 6vw 72px;
-  background: #fff;
-  max-width: 1200px;  
-  margin: 0 auto;     
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Chat bubble icon */

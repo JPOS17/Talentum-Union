@@ -206,39 +206,41 @@ const FAQs = () => {
       </section>
 
       <section className="faq-accordion">
-        <div className="faq-accordion__icon">
-          <FAQBubbleIcon />
-        </div>
-
-        <div className="faq-accordion__columns">
-          <div className="faq-col">
-            <h2 className="faq-col__title">
-              Questions About Working with Talentum Union
-            </h2>
-            {workingQuestions.map(({ q, a }, i) => (
-              <AccordionItem
-                key={`w-${i}`}
-                id={`w-${i}`}
-                question={q}
-                answer={a}
-                openId={openId}
-                setOpenId={setOpenId}
-              />
-            ))}
+        <div className="faq-accordion__inner">
+          <div className="faq-accordion__icon">
+            <FAQBubbleIcon />
           </div>
 
-          <div className="faq-col">
-            <h2 className="faq-col__title">Questions About Recruiting</h2>
-            {recruitingQuestions.map(({ q, a }, i) => (
-              <AccordionItem
-                key={`r-${i}`}
-                id={`r-${i}`}
-                question={q}
-                answer={a}
-                openId={openId}
-                setOpenId={setOpenId}
-              />
-            ))}
+          <div className="faq-accordion__columns">
+            <div className="faq-col">
+              <h2 className="faq-col__title">
+                Questions About Working with Talentum Union
+              </h2>
+              {workingQuestions.map(({ q, a }, i) => (
+                <AccordionItem
+                  key={`w-${i}`}
+                  id={`w-${i}`}
+                  question={q}
+                  answer={a}
+                  openId={openId}
+                  setOpenId={setOpenId}
+                />
+              ))}
+            </div>
+
+            <div className="faq-col">
+              <h2 className="faq-col__title">Questions About Recruiting</h2>
+              {recruitingQuestions.map(({ q, a }, i) => (
+                <AccordionItem
+                  key={`r-${i}`}
+                  id={`r-${i}`}
+                  question={q}
+                  answer={a}
+                  openId={openId}
+                  setOpenId={setOpenId}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
