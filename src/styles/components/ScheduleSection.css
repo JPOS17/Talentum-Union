@@ -1,11 +1,16 @@
 .schedule-section {
+  background: linear-gradient(135deg, #0d6b72 0%, #0a8a8a 40%, #0d7d7a 70%, #0e6b6b 100%);
+  padding: 3rem 4rem;
+  min-height: 140px;
+}
+
+.schedule-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 3rem 4rem;
-  background: linear-gradient(135deg, #0d6b72 0%, #0a8a8a 40%, #0d7d7a 70%, #0e6b6b 100%);
-  min-height: 140px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .schedule-headline {
@@ -54,11 +59,14 @@
   transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .schedule-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .schedule-inner {
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem 1.5rem;
     gap: 1.25rem;
   }
 

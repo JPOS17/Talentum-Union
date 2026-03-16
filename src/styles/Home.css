@@ -1,7 +1,7 @@
 :root {
   --teal:        #1a8c8c;
   --teal-dark:   #176e6e;
-  --teal-bg:     #1a9090;   
+  --teal-bg:     #1a9090;
   --orange:      #e8722a;
   --orange-light:#f08040;
   --navy:        #0d3b5e;
@@ -13,6 +13,7 @@
   --font-head:   'Georgia', 'Times New Roman', serif;
   --font-body:   'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
+
 *,
 *::before,
 *::after {
@@ -41,39 +42,46 @@ body {
   transition: opacity 0.2s, transform 0.15s;
   white-space: nowrap;
 }
+
+.hero__cta .btn {
+  padding: 14px 22px;
+}
+
 .btn:hover {
   opacity: 0.88;
   transform: translateY(-1px);
 }
-
 .btn--orange {
   background: var(--orange);
   color: #fff;
 }
-
 .btn--teal {
   background: var(--teal-dark);
   color: #fff;
 }
 
-/* INFO */
+/* HERO */
 .hero {
   display: flex;
-  align-items: center;
-  min-height: 480px;
-  padding: 60px 6vw;
+  align-items: stretch;
+  min-height: 380px;
+  max-height: 450px;
   background: #fff;
-  gap: 48px;
+  overflow: hidden;
 }
 
 .hero__text {
-  flex: 1 1 420px;
-  max-width: 500px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px 60px 6vw;
 }
 
 .hero__title {
   font-family: var(--font-head);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   font-weight: 700;
   color: var(--navy);
   line-height: 1.2;
@@ -95,36 +103,65 @@ body {
 .hero__cta {
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hero__image {
-  flex: 1 1 380px;
-  max-width: 52%;
+  flex: 0 0 50%;
+  max-width: 50%;
   overflow: hidden;
-  border-radius: 4px;
 }
 
 .hero__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    flex-direction: column;
+    max-height: unset;
+    min-height: unset;
+  }
+  .hero__text {
+    flex: unset;
+    max-width: 100%;
+    width: 100%;
+    padding: 40px 5vw 32px;
+    order: 1;
+  }
+  .hero__image {
+    flex: unset;
+    width: 100%;
+    height: 260px;
+    max-width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
 }
 
 /* SERVICES */
 .services {
   background: var(--teal-bg);
-  padding: 64px 6vw;
+  padding: 30px 6vw;
   text-align: center;
 }
 
 .services__eyebrow {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--orange);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color:  #f88f4d;
   letter-spacing: 0.04em;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-transform: capitalize;
 }
 
@@ -132,24 +169,25 @@ body {
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   font-weight: 700;
   color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
-
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 200px));
   gap: 20px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .services__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 200px));
   }
 }
-@media (max-width: 520px) {
+
+@media (max-width: 360px) {
   .services__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 200px);
   }
 }
 
@@ -157,12 +195,12 @@ body {
   text-decoration: none;
   color: inherit;
   background: var(--card-bg);
-  border-radius: 6px;
-  padding: 36px 20px 28px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 12px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .service-card:hover {
@@ -186,13 +224,12 @@ body {
 /* Talk card */
 .services__talk {
   background: var(--card-bg);
-  border-radius: 6px;
   padding: 28px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  max-width: 680px;
+  max-width: 420px;
   margin: 0 auto;
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
@@ -221,69 +258,60 @@ body {
 /* HIRING PROCESS */
 .process {
   display: flex;
-  align-items: flex-start;
-  padding: 72px 6vw;
-  gap: 56px;
+  align-items: stretch;
+  min-height: 380px;
+  max-height: 450px;
   background: #fff;
+  overflow: hidden;
 }
 
 .process__image {
-  flex: 0 0 38%;
-  max-width: 38%;
-  border-radius: 6px;
-  overflow: hidden;
-  align-self: center;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 
 .process__image img {
   width: 100%;
   height: 100%;
+  min-height: 400px;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .process__content {
-  flex: 1 1 0;
+  flex: 0 0 60%;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 6vw 60px 48px;
 }
 
 .process__title {
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
-  font-weight: 400;
-  color: var(--text-dark);
-  margin-bottom: 40px;
   font-family: var(--font-head);
-  text-align: center;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 32px;
 }
 
 .process__steps {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 32px;
-}
-
-@media (max-width: 700px) {
-  .process__steps {
-    grid-template-columns: 1fr;
-  }
-  .process {
-    flex-direction: column;
-  }
-  .process__image {
-    flex: unset;
-    max-width: 100%;
-    width: 100%;
-  }
+  gap: 28px 32px;
 }
 
 .process__step-header {
   display: flex;
   align-items: baseline;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
 .process__step-number {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--orange);
   line-height: 1;
@@ -291,30 +319,50 @@ body {
 }
 
 .process__step-title {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.3;
 }
 
 .process__step-body {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.65;
   color: var(--text-body);
-  padding-left: 0;
 }
 
-/* RESPONSIVE - INFO */
-@media (max-width: 760px) {
-  .hero {
+/* Responsive — image on top, content below */
+@media (max-width: 920px) {
+  .process {
     flex-direction: column;
-    padding: 40px 5vw;
+    min-height: unset;
+    max-height: unset;
+    overflow: visible;
   }
-  .hero__image {
+  .process__image {
+    flex: unset;
     max-width: 100%;
     width: 100%;
+    height: 280px;
+    min-height: unset;
+    order: 1;
   }
-  .hero__text {
+  .process__image img {
+    min-height: unset;
+    height: 100%;
+  }
+  .process__content {
+    flex: unset;
     max-width: 100%;
+    width: 100%;
+    padding: 40px 5vw 40px;
+    order: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .process__steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }

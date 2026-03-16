@@ -62,7 +62,7 @@ const Home = () => {
               strokeWidth={1.5}
             />
             <span className="service-card__label">
-              Finance &amp; Accounting
+              Finance &amp;<br />Accounting
             </span>
           </Link>
 
@@ -76,7 +76,7 @@ const Home = () => {
               strokeWidth={1.5}
             />
             <span className="service-card__label">
-              Virtual Assistants &amp; Customer Support
+              Virtual Assistants &amp;<br /> Customer Support
             </span>
           </Link>
 
@@ -86,13 +86,13 @@ const Home = () => {
               size={40}
               strokeWidth={1.5}
             />
-            <span className="service-card__label">Marketing &amp; Sales</span>
+            <span className="service-card__label">Marketing &amp;<br />Sales</span>
           </Link>
 
           <Link to="/data-IT-engineering" className="service-card">
             <Globe className="service-card__icon" size={40} strokeWidth={1.5} />
             <span className="service-card__label">
-              Data, IT and Engineering
+              Data, IT and<br />Engineering
             </span>
           </Link>
         </div>

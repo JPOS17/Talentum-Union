@@ -91,14 +91,16 @@ const JobBoard = () => {
             {filtered.length > 0 ? (
               filtered.map((job) => (
                 <tr key={job.id}>
-                  <td className="jb-table__position">{job.position}</td>
-                  <td>{job.area}</td>
-                  <td>
+                  <td className="jb-table__position" data-label="Job Position">
+                    {job.position}
+                  </td>
+                  <td data-label="Area">{job.area}</td>
+                  <td data-label="Details">
                     <Link to={job.route} className="btn btn--orange">
                       View Details
                     </Link>
                   </td>
-                  <td className="jb-table__status">
+                  <td className="jb-table__status" data-label="Status">
                     {job.status === "Filled"
                       ? `Filled – ${job.statusDate}`
                       : "Open"}

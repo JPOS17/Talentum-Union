@@ -2,9 +2,6 @@
 .ja-hero {
   position: relative;
   width: 100%;
-  max-width: 780px;
-  margin: 40px auto 0;
-  border-radius: 8px;
   overflow: hidden;
   height: 220px;
 }
@@ -23,12 +20,18 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px 32px;
+  padding: 24px calc((100% - 780px) / 2 + 24px);
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
+}
+
+@media (max-width: 828px) {
+  .ja-hero__title {
+    padding: 24px 24px;
+  }
 }
 
 /* MAIN CONTENT WRAPPER */

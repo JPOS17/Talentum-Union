@@ -2,7 +2,8 @@
 .faq-hero {
   display: flex;
   align-items: stretch;
-  height: 220px;
+  min-height: 220px;
+  max-height: 340px;
   background: #fff;
   overflow: hidden;
 }
@@ -14,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 48px 40px 48px 6vw;
+  padding: 48px 40px 36px 6vw;
 }
 
 .faq-hero__title {
@@ -47,6 +48,7 @@
 @media (max-width: 680px) {
   .faq-hero {
     flex-direction: column;
+    height: auto;
   }
   .faq-hero__text {
     flex: unset;
@@ -54,6 +56,7 @@
   }
   .faq-hero__image {
     height: 200px;
+    flex: unset;
   }
 }
 
@@ -66,7 +69,7 @@
   background: #fff;
 }
 
-/* Chat bubble icon on the left */
+/* Chat bubble icon */
 .faq-accordion__icon {
   flex-shrink: 0;
   padding-top: 48px;
@@ -83,15 +86,28 @@
   gap: 0 48px;
 }
 
+@media (max-width: 900px) {
+  .faq-accordion__icon {
+    display: none; 
+  }
+  .faq-accordion {
+    padding: 40px 6vw 56px;
+  }
+}
+
 @media (max-width: 760px) {
   .faq-accordion {
     flex-direction: column;
-  }
-  .faq-accordion__icon {
-    padding-top: 0;
+    gap: 0;
+    padding: 36px 6vw 48px;
   }
   .faq-accordion__columns {
     grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+  }
+  .faq-col + .faq-col {
+    margin-top: 36px;
   }
 }
 
@@ -167,7 +183,7 @@
 .faq-item--open .faq-item__answer {
   padding: 4px 4px 16px;
 }
-/* ANSWER CONTENT */
+
 .faq-item__answer p {
   margin-bottom: 8px;
 }

@@ -27,11 +27,26 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-        {/* CONTACT US */}
+
+        {/* FOLLOW US */}
         <div className="footer__col">
-          <h4 className="footer__heading">CONTACT US</h4>
-          <a href="mailto:info@talentumunion.com" className="footer__email">
-            info@talentumunion.com
+          <h4 className="footer__heading">FOLLOW US</h4>
+          <a
+            href="https://www.linkedin.com/company/talentum-union-llc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__social"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="white"
+              width="20"
+              height="20"
+            >
+              <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a1.98 1.98 0 1 1 0-3.96 1.98 1.98 0 0 1 0 3.96zm1.707 13.019H3.63V9h3.414v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
           </a>
         </div>
 
@@ -80,28 +95,14 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-
-        {/* FOLLOW US */}
+        {/* CONTACT US */}
         <div className="footer__col">
-          <h4 className="footer__heading">FOLLOW US</h4>
-          <a
-            href="https://www.linkedin.com/company/talentum-union-llc/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__social"
-            aria-label="LinkedIn"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="white"
-              width="20"
-              height="20"
-            >
-              <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a1.98 1.98 0 1 1 0-3.96 1.98 1.98 0 0 1 0 3.96zm1.707 13.019H3.63V9h3.414v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
+          <h4 className="footer__heading">CONTACT US</h4>
+          <a href="mailto:info@talentumunion.com" className="footer__email">
+            info@talentumunion.com
           </a>
         </div>
+
       </div>
 
       {/* Divider */}
