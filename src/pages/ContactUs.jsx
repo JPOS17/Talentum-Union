@@ -1,6 +1,6 @@
 import "../styles/ContactUs.css";
 
-import laptopImg from "../assets/laptop.png";
+import laptopImg from "../assets/laptop.webp";
 
 const ContactUs = () => {
   return (

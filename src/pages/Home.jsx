@@ -9,8 +9,8 @@ import {
   PhoneCall,
 } from "lucide-react";
 
-import coworkersImage from "../assets/coworkers.png";
-import handshakeImage from "../assets/handshake.png";
+import coworkersImage from "../assets/coworkers.webp";
+import handshakeImage from "../assets/handshake.webp";
 
 const Home = () => {
   const navigate = useNavigate();

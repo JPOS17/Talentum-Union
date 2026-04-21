@@ -2,12 +2,12 @@ import { useNavigate, Link } from "react-router-dom";
 
 import "../styles/SearchTalent.css";
 
-import financeImg from "../assets/finance.png";
-import vaImg from "../assets/va.png";
-import marketingImg from "../assets/marketing.png";
-import itImg from "../assets/it.png";
-import groupImg from "../assets/group.png";
-import teamImg from "../assets/team.png";
+import financeImg from "../assets/finance.webp";
+import vaImg from "../assets/va.webp";
+import marketingImg from "../assets/marketing.webp";
+import itImg from "../assets/it.webp";
+import groupImg from "../assets/group.webp";
+import teamImg from "../assets/team.webp";
 
 const SearchTalent = () => {
   const navigate = useNavigate();

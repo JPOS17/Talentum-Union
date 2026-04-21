@@ -1,6 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-import heroImg from "../../assets/staffAccountant.png";
+import heroImg from "../../assets/staffAccountant.webp";
 
 const Staff_Accountant = () => {
   return (

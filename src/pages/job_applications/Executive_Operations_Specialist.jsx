@@ -1,6 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-import heroImg from "../../assets/executiveOperations.png";
+import heroImg from "../../assets/executiveOperations.webp";
 
 const Executive_Operations_Specialist = () => {
   return (

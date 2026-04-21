@@ -1,5 +1,5 @@
 import "../../styles/Job_Applications.css";
-import heroImg from "../../assets/adminstrativeAssistant.png";
+import heroImg from "../../assets/adminstrativeAssistant.webp";
 
 const Administrative_Assistant = () => {
   return (

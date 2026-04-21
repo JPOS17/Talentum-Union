@@ -47,7 +47,7 @@ const FAQBubbleIcon = () => (
   </svg>
 );
 
-import discussingImg from "../assets/discussing.png";
+import discussingImg from "../assets/discussing.webp";
 
 const workingQuestions = [
   {

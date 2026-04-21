@@ -1,6 +1,6 @@
 import "../styles/About.css";
 
-import groupMeetingImage from "../assets/groupMeeting.png";
+import groupMeetingImage from "../assets/groupMeeting.webp";
 
 const About = () => {
   return (

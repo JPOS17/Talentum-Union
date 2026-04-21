@@ -1,6 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-import heroImg from "../../assets/remoteCopywriter.png";
+import heroImg from "../../assets/remoteCopywriter.webp";
 
 const Remote_Copywriter = () => {
   return (

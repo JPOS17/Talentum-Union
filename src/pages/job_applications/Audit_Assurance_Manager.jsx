@@ -1,6 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-import heroImg from "../../assets/assuranceManager.png";
+import heroImg from "../../assets/assuranceManager.webp";
 
 const Audit_Assurance_Manager = () => {
   return (
