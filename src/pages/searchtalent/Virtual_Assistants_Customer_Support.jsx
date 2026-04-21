@@ -1,9 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { DollarSign, Globe, Users, Zap } from "lucide-react";
 import "../../styles/SearchTalentShared.css";
-
-const heroImg =
-  "https://images.pexels.com/photos/7682358/pexels-photo-7682358.jpeg";
+import heroImg from "../../assets/virtualAssitant.png";
 
 const benefits = [
   {

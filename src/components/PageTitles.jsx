@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const pageTitles = {
@@ -22,19 +22,9 @@ const pageTitles = {
 
 const PageTitle = () => {
   const { pathname } = useLocation();
-  const prevPathname = useRef(pathname);
 
   useEffect(() => {
-    if (prevPathname.current !== pathname) {
-      document.title = "Loading...";
-    }
-
-    const timeout = setTimeout(() => {
-      document.title = pageTitles[pathname] ?? "Talentum Union";
-      prevPathname.current = pathname;
-    }, 200);
-
-    return () => clearTimeout(timeout);
+    document.title = pageTitles[pathname] ?? "Talentum Union";
   }, [pathname]);
 
   return null;

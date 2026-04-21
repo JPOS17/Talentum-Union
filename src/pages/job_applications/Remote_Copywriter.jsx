@@ -1,7 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-const heroImg =
-  "https://images.pexels.com/photos/8035295/pexels-photo-8035295.jpeg";
+import heroImg from "../../assets/remoteCopywriter.png";
 
 const Remote_Copywriter = () => {
   return (

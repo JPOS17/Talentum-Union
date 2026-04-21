@@ -27,7 +27,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-
         {/* FOLLOW US */}
         <div className="footer__col">
           <h4 className="footer__heading">FOLLOW US</h4>
@@ -98,11 +97,10 @@ const Footer = () => {
         {/* CONTACT US */}
         <div className="footer__col">
           <h4 className="footer__heading">CONTACT US</h4>
-          <a href="mailto:info@talentumunion.com" className="footer__email">
-            info@talentumunion.com
+          <a href="mailto:talentumunion@gmail.com" className="footer__email">
+            talentumunion@gmail.com
           </a>
         </div>
-
       </div>
 
       {/* Divider */}

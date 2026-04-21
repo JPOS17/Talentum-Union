@@ -1,7 +1,5 @@
 import "../../styles/Job_Applications.css";
-
-const heroImg =
-  "https://images.pexels.com/photos/7657730/pexels-photo-7657730.jpeg";
+import heroImg from "../../assets/adminstrativeAssistant.png";
 
 const Administrative_Assistant = () => {
   return (

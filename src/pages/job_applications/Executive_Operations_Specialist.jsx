@@ -1,7 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-const heroImg =
-  "https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg";
+import heroImg from "../../assets/executiveOperations.png";
 
 const Executive_Operations_Specialist = () => {
   return (

@@ -1,7 +1,6 @@
 import "../styles/About.css";
 
-const computerImage =
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80";
+import groupMeetingImage from "../assets/groupMeeting.png";
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
       {/* VISION */}
       <section className="vision">
         <div className="vision__image-wrap">
-          <img src={computerImage} alt="Looking at computer" />
+          <img src={groupMeetingImage} alt="Looking at computer" />
         </div>
 
         <div className="vision__content">

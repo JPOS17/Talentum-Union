@@ -9,12 +9,9 @@ import {
   PhoneCall,
 } from "lucide-react";
 
-const coworkersImage =
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
-const handshakeImage =
-  "https://images.pexels.com/photos/8112186/pexels-photo-8112186.jpeg";
+import coworkersImage from "../assets/coworkers.png";
+import handshakeImage from "../assets/handshake.png";
 
-  
 const Home = () => {
   const navigate = useNavigate();
   return (
@@ -63,7 +60,9 @@ const Home = () => {
               strokeWidth={1.5}
             />
             <span className="service-card__label">
-              Finance &amp;<br />Accounting
+              Finance &amp;
+              <br />
+              Accounting
             </span>
           </Link>
 
@@ -77,7 +76,8 @@ const Home = () => {
               strokeWidth={1.5}
             />
             <span className="service-card__label">
-              Virtual Assistants &amp;<br /> Customer Support
+              Virtual Assistants &amp;
+              <br /> Customer Support
             </span>
           </Link>
 
@@ -87,13 +87,19 @@ const Home = () => {
               size={40}
               strokeWidth={1.5}
             />
-            <span className="service-card__label">Marketing &amp;<br />Sales</span>
+            <span className="service-card__label">
+              Marketing &amp;
+              <br />
+              Sales
+            </span>
           </Link>
 
           <Link to="/data-IT-engineering" className="service-card">
             <Globe className="service-card__icon" size={40} strokeWidth={1.5} />
             <span className="service-card__label">
-              Data, IT and<br />Engineering
+              Data, IT and
+              <br />
+              Engineering
             </span>
           </Link>
         </div>

@@ -47,8 +47,7 @@ const FAQBubbleIcon = () => (
   </svg>
 );
 
-const discussingImg =
-  "https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg";
+import discussingImg from "../assets/discussing.png";
 
 const workingQuestions = [
   {

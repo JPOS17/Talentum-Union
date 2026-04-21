@@ -1,7 +1,6 @@
 import "../../styles/Job_Applications.css";
 
-const heroImg =
-  "https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg";
+import heroImg from "../../assets/assuranceManager.png";
 
 const Audit_Assurance_Manager = () => {
   return (

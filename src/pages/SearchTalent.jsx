@@ -2,18 +2,12 @@ import { useNavigate, Link } from "react-router-dom";
 
 import "../styles/SearchTalent.css";
 
-const financeImg =
-  "https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg";
-const vaImg =
-  "https://images.pexels.com/photos/8867431/pexels-photo-8867431.jpeg";
-const marketingImg =
-  "https://images.pexels.com/photos/3182827/pexels-photo-3182827.jpeg";
-const itImg =
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=700&q=80";
-const groupImg =
-  "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-const teamImg =
-  "https://images.pexels.com/photos/4342124/pexels-photo-4342124.jpeg";
+import financeImg from "../assets/finance.png";
+import vaImg from "../assets/va.png";
+import marketingImg from "../assets/marketing.png";
+import itImg from "../assets/it.png";
+import groupImg from "../assets/group.png";
+import teamImg from "../assets/team.png";
 
 const SearchTalent = () => {
   const navigate = useNavigate();
