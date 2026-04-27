@@ -1,8 +1,30 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/ContactUs.css";
-
 import laptopImg from "../assets/laptop.webp";
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const ContactUs = () => {
+  const formRef = useRef();
+  const [status, setStatus] = useState("idle");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(() => {
+        setStatus("success");
+        formRef.current.reset();
+      })
+      .catch(() => {
+        setStatus("error");
+      });
+  };
+
   return (
     <div className="cu-page">
       <div className="cu-inner">
@@ -13,13 +35,11 @@ const ContactUs = () => {
             alt="Person working on laptop"
             className="cu-sidebar__img"
           />
-
           <div className="cu-sidebar__hours">
             <p className="cu-sidebar__hours-title">Working Hours:</p>
             <p>Open: Mon-Fri 9am – 6pm CST</p>
             <p>Closed: Saturday and Sunday</p>
           </div>
-
           <div className="cu-sidebar__social">
             <p className="cu-sidebar__social-title">Follow Us</p>
             <a
@@ -51,16 +71,26 @@ const ContactUs = () => {
             possible.
           </p>
 
-          <div className="cu-form">
+          <form className="cu-form" ref={formRef} onSubmit={handleSubmit}>
             {/* Row 1 */}
             <div className="cu-form__row">
               <div className="cu-form__field">
                 <label className="cu-form__label">First Name*</label>
-                <input type="text" className="cu-form__input" />
+                <input
+                  type="text"
+                  name="first_name"
+                  className="cu-form__input"
+                  required
+                />
               </div>
               <div className="cu-form__field">
                 <label className="cu-form__label">Last Name*</label>
-                <input type="text" className="cu-form__input" />
+                <input
+                  type="text"
+                  name="last_name"
+                  className="cu-form__input"
+                  required
+                />
               </div>
             </div>
 
@@ -68,11 +98,16 @@ const ContactUs = () => {
             <div className="cu-form__row">
               <div className="cu-form__field">
                 <label className="cu-form__label">Company Name</label>
-                <input type="text" className="cu-form__input" />
+                <input type="text" name="company" className="cu-form__input" />
               </div>
               <div className="cu-form__field">
                 <label className="cu-form__label">Email*</label>
-                <input type="email" className="cu-form__input" />
+                <input
+                  type="email"
+                  name="from_email"
+                  className="cu-form__input"
+                  required
+                />
               </div>
             </div>
 
@@ -80,7 +115,12 @@ const ContactUs = () => {
             <div className="cu-form__row cu-form__row--half">
               <div className="cu-form__field">
                 <label className="cu-form__label">Subject*</label>
-                <input type="text" className="cu-form__input" />
+                <input
+                  type="text"
+                  name="subject"
+                  className="cu-form__input"
+                  required
+                />
               </div>
             </div>
 
@@ -88,32 +128,49 @@ const ContactUs = () => {
             <div className="cu-form__field">
               <p className="cu-form__label">I am looking...</p>
               <label className="cu-form__radio">
-                <input type="radio" name="inquiry" value="hire" /> To hire
+                <input type="radio" name="inquiry" value="To hire" /> To hire
               </label>
               <label className="cu-form__radio">
-                <input type="radio" name="inquiry" value="job" /> For a job
+                <input type="radio" name="inquiry" value="For a job" /> For a
+                job
               </label>
               <label className="cu-form__radio">
-                <input type="radio" name="inquiry" value="other" /> Other
-                inquiry
+                <input type="radio" name="inquiry" value="Other inquiry" />{" "}
+                Other inquiry
               </label>
             </div>
 
             {/* Message */}
             <div className="cu-form__field">
               <label className="cu-form__label">Message</label>
-              <textarea className="cu-form__textarea" rows={5} />
+              <textarea name="message" className="cu-form__textarea" rows={5} />
             </div>
+
+            {/* Status messages */}
+            {status === "success" && (
+              <p style={{ color: "green" }}>
+                ✅ Message sent! We'll be in touch soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p style={{ color: "red" }}>
+                ❌ Something went wrong. Please try again.
+              </p>
+            )}
 
             {/* Submit */}
             <div className="cu-form__submit-wrap">
-              <button className="btn btn--orange cu-form__submit">
-                Submit
+              <button
+                type="submit"
+                className="btn btn--orange cu-form__submit"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Sending..." : "Submit"}
               </button>
             </div>
-          </div>
+          </form>
         </main>
-      </div>{" "}
+      </div>
     </div>
   );
 };
