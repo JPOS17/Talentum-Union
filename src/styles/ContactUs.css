@@ -307,3 +307,13 @@
   from { opacity: 1; transform: translateX(-50%) translateY(0); }
   to   { opacity: 0; transform: translateX(-50%) translateY(16px); }
 }
+
+.cu-form__input--error {
+  box-shadow: 0 0 0 2px #c0392b;
+}
+
+.cu-form__error {
+  font-size: 0.78rem;
+  color: #ffaaaa;
+  margin-top: 2px;
+}

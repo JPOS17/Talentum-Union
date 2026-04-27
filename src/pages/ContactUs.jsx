@@ -10,19 +10,50 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const ContactUs = () => {
   const formRef = useRef();
   const [status, setStatus] = useState("idle");
+  const [errors, setErrors] = useState({});
+
+  const validate = (form) => {
+    const newErrors = {};
+    if (!form.first_name.value.trim())
+      newErrors.first_name = "First Name is required";
+    if (!form.last_name.value.trim())
+      newErrors.last_name = "Last Name is required";
+    if (!form.from_email.value.trim())
+      newErrors.from_email = "Email is required";
+    if (!form.subject.value.trim()) newErrors.subject = "Subject is required";
+    if (!form.inquiry.value) newErrors.inquiry = "Please select an option";
+    if (!form.message.value.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const form = formRef.current;
+    const newErrors = validate(form);
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
     setStatus("sending");
 
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY)
       .then(() => {
         setStatus("success");
-        formRef.current.reset();
+        form.reset();
       })
       .catch(() => {
         setStatus("error");
       });
+  };
+
+  const clearError = (field) => {
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    }
   };
 
   return (
@@ -71,7 +102,12 @@ const ContactUs = () => {
             possible.
           </p>
 
-          <form className="cu-form" ref={formRef} onSubmit={handleSubmit}>
+          <form
+            className="cu-form"
+            ref={formRef}
+            onSubmit={handleSubmit}
+            noValidate
+          >
             {/* Row 1 */}
             <div className="cu-form__row">
               <div className="cu-form__field">
@@ -79,18 +115,24 @@ const ContactUs = () => {
                 <input
                   type="text"
                   name="first_name"
-                  className="cu-form__input"
-                  required
+                  className={`cu-form__input ${errors.first_name ? "cu-form__input--error" : ""}`}
+                  onChange={() => clearError("first_name")}
                 />
+                {errors.first_name && (
+                  <span className="cu-form__error">{errors.first_name}</span>
+                )}
               </div>
               <div className="cu-form__field">
                 <label className="cu-form__label">Last Name*</label>
                 <input
                   type="text"
                   name="last_name"
-                  className="cu-form__input"
-                  required
+                  className={`cu-form__input ${errors.last_name ? "cu-form__input--error" : ""}`}
+                  onChange={() => clearError("last_name")}
                 />
+                {errors.last_name && (
+                  <span className="cu-form__error">{errors.last_name}</span>
+                )}
               </div>
             </div>
 
@@ -105,9 +147,12 @@ const ContactUs = () => {
                 <input
                   type="email"
                   name="from_email"
-                  className="cu-form__input"
-                  required
+                  className={`cu-form__input ${errors.from_email ? "cu-form__input--error" : ""}`}
+                  onChange={() => clearError("from_email")}
                 />
+                {errors.from_email && (
+                  <span className="cu-form__error">{errors.from_email}</span>
+                )}
               </div>
             </div>
 
@@ -118,9 +163,12 @@ const ContactUs = () => {
                 <input
                   type="text"
                   name="subject"
-                  className="cu-form__input"
-                  required
+                  className={`cu-form__input ${errors.subject ? "cu-form__input--error" : ""}`}
+                  onChange={() => clearError("subject")}
                 />
+                {errors.subject && (
+                  <span className="cu-form__error">{errors.subject}</span>
+                )}
               </div>
             </div>
 
@@ -128,25 +176,52 @@ const ContactUs = () => {
             <div className="cu-form__field">
               <p className="cu-form__label">I am looking...</p>
               <label className="cu-form__radio">
-                <input type="radio" name="inquiry" value="To hire" /> To hire
+                <input
+                  type="radio"
+                  name="inquiry"
+                  value="To hire"
+                  onChange={() => clearError("inquiry")}
+                />{" "}
+                To hire
               </label>
               <label className="cu-form__radio">
-                <input type="radio" name="inquiry" value="For a job" /> For a
-                job
+                <input
+                  type="radio"
+                  name="inquiry"
+                  value="For a job"
+                  onChange={() => clearError("inquiry")}
+                />{" "}
+                For a job
               </label>
               <label className="cu-form__radio">
-                <input type="radio" name="inquiry" value="Other inquiry" />{" "}
+                <input
+                  type="radio"
+                  name="inquiry"
+                  value="Other inquiry"
+                  onChange={() => clearError("inquiry")}
+                />{" "}
                 Other inquiry
               </label>
+              {errors.inquiry && (
+                <span className="cu-form__error">{errors.inquiry}</span>
+              )}
             </div>
 
             {/* Message */}
             <div className="cu-form__field">
               <label className="cu-form__label">Message</label>
-              <textarea name="message" className="cu-form__textarea" rows={5} />
+              <textarea
+                name="message"
+                className={`cu-form__textarea ${errors.message ? "cu-form__input--error" : ""}`}
+                rows={5}
+                onChange={() => clearError("message")}
+              />
+              {errors.message && (
+                <span className="cu-form__error">{errors.message}</span>
+              )}{" "}
             </div>
 
-            {/* Status messages */}
+            {/* Toast status messages */}
             {status === "success" && (
               <div className="cu-form__toast cu-form__toast--success">
                 Message sent! We'll be in touch soon.
