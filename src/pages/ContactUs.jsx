@@ -148,14 +148,14 @@ const ContactUs = () => {
 
             {/* Status messages */}
             {status === "success" && (
-              <p style={{ color: "green" }}>
-                ✅ Message sent! We'll be in touch soon.
-              </p>
+              <div className="cu-form__toast cu-form__toast--success">
+                Message sent! We'll be in touch soon.
+              </div>
             )}
             {status === "error" && (
-              <p style={{ color: "red" }}>
-                ❌ Something went wrong. Please try again.
-              </p>
+              <div className="cu-form__toast cu-form__toast--error">
+                Something went wrong. Please try again.
+              </div>
             )}
 
             {/* Submit */}
