@@ -1,62 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { jobs } from "../data/jobsData";
 import "../styles/JobBoard.css";
-
-const jobs = [
-  {
-    id: 1,
-    position: "Remote Copywriter",
-    area: "Marketing & Sales",
-    status: "Filled",
-    statusDate: "Dec 2025",
-    route: "/remote-copywriter",
-  },
-  {
-    id: 2,
-    position: "Executive Operations Specialist",
-    area: "Virtual Assistants & Customer Support",
-    status: "Filled",
-    statusDate: "Nov 2025",
-    route: "/executive-operations-specialist",
-  },
-  {
-    id: 3,
-    position: "Staff Accountant",
-    area: "Accounting",
-    status: "Filled",
-    statusDate: "Sept 2025",
-    route: "/staff-accountant",
-  },
-  {
-    id: 4,
-    position: "Administrative Assistant",
-    area: "Virtual Assistants & Customer Support",
-    status: "Open",
-    statusDate: null,
-    route: "/administrative-assistant",
-  },
-  {
-    id: 5,
-    position: "Audit & Assurance-Manager",
-    area: "Accounting",
-    status: "Open",
-    statusDate: null,
-    route: "/audit-assurance-manager",
-  },
-];
 
 const JobBoard = () => {
   const [query, setQuery] = useState("");
 
   const filtered = jobs.filter(
     (job) =>
-      job.position.toLowerCase().includes(query.toLowerCase()) ||
+      job.title.toLowerCase().includes(query.toLowerCase()) ||
       job.area.toLowerCase().includes(query.toLowerCase()),
   );
 
   return (
     <>
-      {/* INFO */}
+      {/* HERO */}
       <section className="jb-hero">
         <h1 className="jb-hero__title">Job Board</h1>
 
@@ -90,13 +48,13 @@ const JobBoard = () => {
           <tbody>
             {filtered.length > 0 ? (
               filtered.map((job) => (
-                <tr key={job.id}>
+                <tr key={job.slug}>
                   <td className="jb-table__position" data-label="Job Position">
-                    {job.position}
+                    {job.title}
                   </td>
                   <td data-label="Area">{job.area}</td>
                   <td data-label="Details">
-                    <Link to={job.route} className="btn btn--orange">
+                    <Link to={`/jobs/${job.slug}`} className="btn btn--orange">
                       View Details
                     </Link>
                   </td>
