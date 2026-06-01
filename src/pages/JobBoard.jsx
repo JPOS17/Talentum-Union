@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { jobs } from "../data/jobsData";
+
+import "../styles/Tokens.css";
 import "../styles/JobBoard.css";
 
 const JobBoard = () => {

@@ -4,11 +4,11 @@
   justify-content: center;
   padding: 14px 32px;
   border: none;
-  border-radius: 50px;
-  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.2s, transform 0.15s;
+  transition: var(--transition-fast);
   white-space: nowrap;
 }
 .btn:hover {
@@ -16,8 +16,8 @@
   transform: translateY(-1px);
 }
 .btn--orange {
-  background: #e8722a;
-  color: #fff;
+  background: var(--color-secondary);
+  color: var(--color-text-on-brand);
 }
 
 /* PAGE LAYOUT */
@@ -25,7 +25,7 @@
   display: flex;
   align-items: flex-start;
   min-height: 100vh;
-  background: linear-gradient(160deg, #1a8c8c 0%, #0d5f6e 100%);
+  background: var(--gradient-hero);
   padding: 40px 5vw;
   gap: 40px;
   box-sizing: border-box;
@@ -43,32 +43,32 @@
 /* SIDEBAR */
 .cu-sidebar {
   flex: 0 0 220px;
-  background: #0d4a5c;
+  background: var(--color-bg-sidebar);
   padding: 24px 20px 32px;
   display: flex;
   flex-direction: column;
   gap: 28px;
-  color: #fff;
+  color: var(--color-text-on-brand);
 }
 
 .cu-sidebar__img {
   width: 100%;
   height: 140px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   display: block;
 }
 
 .cu-sidebar__hours {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   line-height: 1.75;
-  color: rgba(255,255,255,0.92);
-  white-space: nowrap; 
+  color: rgba(255,255,255,0.92); /* sidebar hours - intentional opacity */
+  white-space: nowrap;
 }
 
 .cu-sidebar__hours-title {
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text-on-brand);
   margin-bottom: 6px;
 }
 
@@ -80,8 +80,8 @@
 
 .cu-sidebar__social-title {
   font-weight: 700;
-  font-size: 0.95rem;
-  color: #fff;
+  font-size: var(--text-md);
+  color: var(--color-text-on-brand);
 }
 
 .cu-sidebar__linkedin {
@@ -90,9 +90,9 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: #0a66c2;
+  background: var(--color-linkedin);
   border-radius: 50%;
-  transition: opacity 0.2s, transform 0.15s;
+  transition: var(--transition-fast);
 }
 
 .cu-sidebar__linkedin:hover {
@@ -103,21 +103,21 @@
 /* FORM AREA */
 .cu-form-wrap {
   flex: 1 1 0;
-  color: #fff;
-  min-width: 0; 
+  color: var(--color-text-on-brand);
+  min-width: 0;
 }
 
 .cu-form__title {
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
   text-align: center;
   margin-bottom: 12px;
-  color: #fff;
+  color: var(--color-text-on-brand);
 }
 
 .cu-form__subtitle {
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   line-height: 1.7;
   text-align: center;
   color: rgba(255,255,255,0.9);
@@ -135,7 +135,7 @@
 .cu-form__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: var(--space-md);
 }
 
 .cu-form__row--half {
@@ -153,19 +153,19 @@
 }
 
 .cu-form__label {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: rgba(255,255,255,0.95);
 }
 
 .cu-form__input,
 .cu-form__textarea {
-  background: #fff;
+  background: var(--color-bg-white);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   padding: 10px 14px;
-  font-size: 0.9rem;
-  color: #1a2e3b;
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
   outline: none;
   font-family: inherit;
   transition: box-shadow 0.15s;
@@ -176,22 +176,22 @@
 
 .cu-form__input:focus,
 .cu-form__textarea:focus {
-  box-shadow: 0 0 0 2px #e8722a;
+  box-shadow: 0 0 0 2px var(--color-secondary);
 }
 
 /* Radio buttons */
 .cu-form__radio {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
   color: rgba(255,255,255,0.9);
   cursor: pointer;
   margin-top: 4px;
 }
 
 .cu-form__radio input[type="radio"] {
-  accent-color: #e8722a;
+  accent-color: var(--color-secondary);
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -201,12 +201,12 @@
 .cu-form__submit-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: var(--space-sm);
 }
 
 .cu-form__submit {
   padding: 14px 52px;
-  font-size: 1rem;
+  font-size: var(--text-lg);
 }
 
 /* RESPONSIVE */
@@ -225,7 +225,7 @@
   }
   .cu-inner {
     flex-direction: column;
-    gap: 24px;
+    gap: var(--space-lg);
   }
   .cu-sidebar {
     flex: unset;
@@ -272,30 +272,31 @@
   }
 }
 
+/* TOAST */
 .cu-form__toast {
   position: fixed;
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   padding: 14px 28px;
-  border-radius: 50px;
-  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lg);
   z-index: 9999;
   animation: toast-in 0.3s ease forwards, toast-out 0.4s ease 4.6s forwards;
   white-space: nowrap;
 }
 
 .cu-form__toast--success {
-  background: #1a3c5e;
-  color: #fff;
+  background: var(--color-toast-success);
+  color: var(--color-text-on-brand);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cu-form__toast--error {
-  background: #c0392b;
-  color: #fff;
+  background: var(--color-error);
+  color: var(--color-text-on-brand);
 }
 
 @keyframes toast-in {
@@ -309,11 +310,11 @@
 }
 
 .cu-form__input--error {
-  box-shadow: 0 0 0 2px #c0392b;
+  box-shadow: 0 0 0 2px var(--color-error);
 }
 
 .cu-form__error {
-  font-size: 0.78rem;
-  color: #ffaaaa;
+  font-size: var(--text-xs);
+  color: var(--color-error-text);
   margin-top: 2px;
 }

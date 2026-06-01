@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { DollarSign, Globe, Users, Zap } from "lucide-react";
+
+import "../../styles/Tokens.css";
 import "../../styles/SearchTalentShared.css";
+
 import heroImg from "../../assets/dataIt.webp";
 
 const benefits = [

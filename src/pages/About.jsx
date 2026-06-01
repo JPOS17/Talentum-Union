@@ -1,3 +1,4 @@
+import "../styles/Tokens.css";
 import "../styles/About.css";
 
 import groupMeetingImage from "../assets/groupMeeting.webp";

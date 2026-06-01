@@ -1,0 +1,160 @@
+/* =============================================================
+   tokens.css  —  Talentum Union Design Tokens
+   Import this file ONCE in main.jsx / index.jsx:
+     import "./styles/tokens.css";
+
+   Every other CSS file references these variables.
+   To change the theme, only edit values in this file.
+   ============================================================= */
+
+:root {
+
+  /* -----------------------------------------------------------
+     BRAND COLORS
+     primary   = main brand color (currently teal)
+     secondary = accent / CTA color (currently orange)
+     dark      = headings and deep backgrounds (currently navy)
+  ----------------------------------------------------------- */
+  --color-primary:         #1a8c8c;   /* main brand color */
+  --color-primary-dark:    #176e6e;   /* darker shade (hover states) */
+  --color-primary-bg:      #1a9090;   /* primary used as a section background */
+  --color-primary-deep:    #0d5f6e;   /* deep shade (gradient end, sidebar) */
+  --color-primary-deeper:  #0d6b72;   /* deepest shade (schedule gradient) */
+
+  --color-secondary:       #e8722a;   /* accent / CTA buttons */
+  --color-secondary-light: #f08040;   /* lighter accent */
+  --color-secondary-hover: #d06e28;   /* accent hover state */
+
+  --color-dark:            #0d3b5e;   /* headings, dark text accents, navbar CTA bg */
+
+  /* -----------------------------------------------------------
+     TEXT COLORS
+  ----------------------------------------------------------- */
+  --color-text-primary:    #1a2e3b;   /* main body text */
+  --color-text-secondary:  #3a4a55;   /* supporting body text */
+  --color-text-muted:      #4a5a66;   /* captions, FAQ answers */
+  --color-text-subtle:     #4a6570;   /* status labels, placeholders */
+  --color-text-on-brand:   #ffffff;   /* text on colored backgrounds */
+  --color-text-tinted:     #1a6e7a;   /* tinted body text (About page) */
+  --color-text-footer:     #374151;   /* footer links and email */
+  --color-text-meta:       #6b7280;   /* copyright, chevrons, timestamps */
+
+  /* -----------------------------------------------------------
+     BACKGROUNDS & SURFACES
+  ----------------------------------------------------------- */
+  --color-bg-white:        #ffffff;
+  --color-bg-light:        #f7f9fb;   /* light grey page sections */
+  --color-bg-sidebar:      #0d4a5c;   /* contact page sidebar */
+  --color-bg-disabled:     #d1d9de;   /* disabled button fill */
+  --color-text-disabled:   #8a9ba5;   /* disabled button text */
+  --color-bg-hover-light:  #f4f8fa;   /* table / card hover tint */
+  --color-bg-hover-teal:   #f4f9f9;   /* dropdown item hover tint */
+  --color-bg-hover-card:   #f8fbfc;   /* mobile card hover tint */
+
+  /* -----------------------------------------------------------
+     SOCIAL / THIRD-PARTY BRAND COLORS
+  ----------------------------------------------------------- */
+  --color-linkedin:        #0a66c2;   /* LinkedIn brand blue */
+  --color-linkedin-hover:  #084f96;   /* LinkedIn hover */
+
+  /* -----------------------------------------------------------
+     SEMANTIC / STATUS COLORS
+  ----------------------------------------------------------- */
+  --color-error:           #c0392b;   /* error / danger red */
+  --color-error-text:      #ffaaaa;   /* error text on dark bg */
+  --color-toast-success:   #1a3c5e;   /* success toast background */
+
+  /* -----------------------------------------------------------
+     BORDERS
+  ----------------------------------------------------------- */
+  --color-border:          #e2e8ed;   /* standard border / divider */
+  --color-border-brand:    #d1e8ea;   /* brand-tinted border (sub-menus, dropdowns) */
+  --color-border-page:     #e5e7eb;   /* footer / page-level divider */
+  --color-border-accent:   #d8e4ea;   /* FAQ accordion border */
+  --color-border-subtle:   #f0f4f7;   /* very light dividers (nav items, mobile menu) */
+  --color-border-card:     #dde4ea;   /* value card border */
+  --color-border-rule:     #d0dce4;   /* experience section rule */
+
+  /* -----------------------------------------------------------
+     DECORATIVE / ICON COLORS
+  ----------------------------------------------------------- */
+  --color-icon-faq:        #c8d8e0;   /* FAQ bubble icon */
+  --color-icon-muted:      #6b7280;   /* muted icons and chevrons */
+  --color-icon-placeholder:#9aafb8;   /* input placeholder / muted icon */
+  --color-nav-sep:         #b0bec5;   /* navbar separator pipe */
+  --color-schedule-body:   #d4f0ef;   /* schedule section body text tint */
+  --color-secondary-cta:   #f58845;   /* navbar CTA accent (lighter orange) */
+
+  /* -----------------------------------------------------------
+     GRADIENTS
+     Update these if you change --color-primary-* values above.
+  ----------------------------------------------------------- */
+  --gradient-hero:         linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-deep) 100%);
+  --gradient-schedule:     linear-gradient(135deg, var(--color-primary-deeper) 0%, #0a8a8a 40%, #0d7d7a 70%, #0e6b6b 100%);
+  --gradient-banner:       linear-gradient(90deg, var(--color-primary-deep) 0%, var(--color-primary-bg) 100%);
+
+  /* -----------------------------------------------------------
+     TYPOGRAPHY
+  ----------------------------------------------------------- */
+  --font-head:    'Georgia', 'Times New Roman', serif;
+  --font-body:    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  --text-xs:      0.78rem;
+  --text-sm:      0.875rem;
+  --text-base:    0.9rem;
+  --text-md:      0.95rem;
+  --text-lg:      1rem;
+  --text-xl:      1.05rem;
+
+  /* -----------------------------------------------------------
+     SPACING
+  ----------------------------------------------------------- */
+  --space-xs:     4px;
+  --space-sm:     8px;
+  --space-md:     16px;
+  --space-lg:     24px;
+  --space-xl:     32px;
+  --space-2xl:    48px;
+  --space-3xl:    64px;
+
+  /* -----------------------------------------------------------
+     SHAPE
+  ----------------------------------------------------------- */
+  --radius-sm:    4px;
+  --radius-md:    6px;
+  --radius-lg:    8px;
+  --radius-pill:  50px;
+
+  /* -----------------------------------------------------------
+     SHADOWS
+  ----------------------------------------------------------- */
+  --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md:     0 2px 10px rgba(0, 0, 0, 0.07);
+  --shadow-lg:     0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-navbar: 0 1px 6px rgba(0, 0, 0, 0.06);
+
+  /* -----------------------------------------------------------
+     TRANSITIONS
+  ----------------------------------------------------------- */
+  --transition-fast:   opacity 0.2s, transform 0.15s;
+  --transition-color:  color 0.15s;
+  --transition-bg:     background 0.15s;
+}
+
+/* =============================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg-white);
+}

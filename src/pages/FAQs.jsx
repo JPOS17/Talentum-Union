@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import "../styles/Tokens.css";
 import "../styles/FAQs.css";
 
 const FAQBubbleIcon = () => (

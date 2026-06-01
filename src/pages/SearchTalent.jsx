@@ -1,5 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 
+import "../styles/Tokens.css";
 import "../styles/SearchTalent.css";
 
 import financeImg from "../assets/finance.webp";
