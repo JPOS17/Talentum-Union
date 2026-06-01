@@ -303,8 +303,8 @@ export const jobs = [
   {
     slug:         "administrative-assistant",
     area:         "Virtual Assistants & Customer Support",
-    status:       "Open",
-    statusDate:   null,
+    status:       "Filled",
+    statusDate:   "Feb 2026",
 
     heroImage:    adminAssistantImg,
     heroAlt:      "Administrative Assistant",
