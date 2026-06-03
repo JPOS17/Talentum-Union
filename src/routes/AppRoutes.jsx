@@ -19,11 +19,11 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about-us" element={<About />} />
-      <Route path="/search-talent" element={<SearchTalent />} />
       <Route path="/job-board" element={<JobBoard />} />
       <Route path="/faqs" element={<FAQs />} />
       <Route path="/contact" element={<ContactUs />} />
 
+      <Route path="/search-talent" element={<SearchTalent />} />
       {/* Search Talent Navigation */}
       <Route path="/finance-accounting" element={<Finance_Accounting />} />
       <Route

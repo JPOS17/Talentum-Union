@@ -2,14 +2,10 @@ import { useParams, Navigate } from "react-router-dom";
 import { jobs } from "../data/jobsData";
 import "../styles/Job_Applications.css";
 
-// ---------------------------------------------------------------------------
-//  Small helpers
-// ---------------------------------------------------------------------------
-
-/** Render a string that may contain inline HTML (bold tags, etc.) */
+// Render a string that may contain inline HTML (bold tags, etc.)
 const HTML = ({ text }) => <span dangerouslySetInnerHTML={{ __html: text }} />;
 
-/** One bullet item — supports HTML */
+// One bullet item — supports HTML
 const Bullet = ({ text }) => (
   <li>
     <HTML text={text} />
@@ -97,15 +93,10 @@ const ExtraSectionBody = ({ section }) => {
   return null;
 };
 
-// ---------------------------------------------------------------------------
-//  Default apply-footer text
-// ---------------------------------------------------------------------------
+// Default apply-footer text
 const DEFAULT_APPLY_NOTE =
   "If you like to apply, please send your CV in English to our email and we will get back to you as soon as possible!";
 
-// ---------------------------------------------------------------------------
-//  Main component
-// ---------------------------------------------------------------------------
 const JobPostingTemplate = () => {
   const { slug } = useParams();
   const job = jobs.find((j) => j.slug === slug);

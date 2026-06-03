@@ -62,7 +62,7 @@
 .cu-sidebar__hours {
   font-size: var(--text-sm);
   line-height: 1.75;
-  color: rgba(255,255,255,0.92); /* sidebar hours - intentional opacity */
+  color: rgba(255,255,255,0.92); 
   white-space: nowrap;
 }
 

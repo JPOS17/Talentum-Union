@@ -17,14 +17,9 @@ import assuranceManagerImg    from "../assets/assuranceManager.webp";
 import adminAssistantImg      from "../assets/adminstrativeAssistant.webp";
 import executiveOpsImg        from "../assets/executiveOperations.webp";
 
-// ============================================================
-//  JOBS ARRAY
-// ============================================================
 export const jobs = [
 
-  // ----------------------------------------------------------
-  //  SENIOR ACCOUNTANT
-  // ----------------------------------------------------------
+  // SENIOR ACCOUNTANT
   {
     slug:         "senior-accountant",
     area:         "Accounting",
@@ -157,30 +152,24 @@ export const jobs = [
     applyNote: null,
   },
 
-  // ----------------------------------------------------------
-  //  AUDIT & ASSURANCE MANAGER
-  // ----------------------------------------------------------
-  {
-    // --- Routing & board ---
-    slug:         "audit-assurance-manager",   // URL: /jobs/audit-assurance-manager
-    area:         "Accounting",
-    status:       "Open",                      // "Open" | "Filled"
-    statusDate:   null,                        // e.g. "Jan 2026" when Filled
 
-    // --- Hero ---
+  // AUDIT & ASSURANCE MANAGER
+  {
+    slug:         "audit-assurance-manager",
+    area:         "Accounting",
+    status:       "Open",
+    statusDate:   null,
+
     heroImage:    assuranceManagerImg,
     heroAlt:      "Audit & Assurance Manager",
 
-    // --- Page title ---
     title:        "Audit & Assurance Manager",
 
-    // --- Meta row ---
     location:     "Remote (Mexico-based candidates)",
     positionType: "Full-time",
     salary:       "$4,000–$5,000 USD gross/month (based on experience and certification)",
     schedule:     "Monday to Friday, 8am–4pm or 9am–5pm (Eastern Time, flexible)",
 
-    // --- Body sections ---
     aboutOpportunity: [
       "Talentum Union has partnered with a <strong>U.S.-based accounting</strong> firm specializing in <strong>Nonprofit organizations</strong>. The firm is recognized for delivering high-quality audit, assurance, and advisory services with a strong emphasis on accuracy, transparency, and long-term client relationships.",
       "As part of a growing remote team, you'll work in a professional, collaborative environment that values ownership, continuous improvement, and leadership development. This is a long-term opportunity with direct client exposure and team leadership responsibility as the firm continues to expand.",
@@ -192,8 +181,6 @@ export const jobs = [
       "This position requires strong technical expertise in audit and assurance services, leadership skills, and the ability to manage multiple engagements while maintaining high-quality standards and client relationships.",
     ],
 
-    // responsibilities supports flat lists AND grouped subsections.
-    // Use { heading, items } for a subsection, or just a plain string for a flat bullet.
     responsibilities: [
       {
         heading: "Audit & Assurance Leadership",
@@ -235,7 +222,6 @@ export const jobs = [
       },
     ],
 
-    // qualifications supports flat lists AND grouped subsections (same pattern as responsibilities)
     qualifications: [
       {
         heading: "Required",
@@ -273,8 +259,6 @@ export const jobs = [
       },
     ],
 
-    // Extra named sections (optional). Each becomes an h2 + content block.
-    // content can be paragraphs (strings) or { heading, items, outcome } subsections.
     extraSections: [
       {
         title: "Reporting Structure",
@@ -293,13 +277,11 @@ export const jobs = [
       "A collaborative, growth-oriented team environment with leadership opportunities.",
     ],
 
-    // Footer apply note (leave null to use the default)
     applyNote: null,
   },
 
-  // ----------------------------------------------------------
-  //  ADMINISTRATIVE ASSISTANT
-  // ----------------------------------------------------------
+
+  // ADMINISTRATIVE ASSISTANT
   {
     slug:         "administrative-assistant",
     area:         "Virtual Assistants & Customer Support",
@@ -381,7 +363,6 @@ export const jobs = [
     extraSections: [
       {
         title: "30-60-90 Day Success Plan",
-        // subsections inside an extra section
         subsections: [
           {
             heading: "First 30 Days – System Mastery & Foundation",
@@ -430,9 +411,8 @@ export const jobs = [
     applyNote: "If you like to apply, please send your CV and a copy of your Contador Público Certificado to our email and we will get back to you as soon as possible!",
   },
 
-  // ----------------------------------------------------------
-  //  REMOTE COPYWRITER  (Filled)
-  // ----------------------------------------------------------
+
+  // REMOTE COPYWRITER (Filled)
   {
     slug:         "remote-copywriter",
     area:         "Marketing & Sales",
@@ -487,9 +467,8 @@ export const jobs = [
     applyNote: null,
   },
 
-  // ----------------------------------------------------------
-  //  EXECUTIVE OPERATIONS SPECIALIST  (Filled)
-  // ----------------------------------------------------------
+
+  // EXECUTIVE OPERATIONS SPECIALIST (Filled)
   {
     slug:         "executive-operations-specialist",
     area:         "Virtual Assistants & Customer Support",
@@ -544,9 +523,8 @@ export const jobs = [
     applyNote: null,
   },
 
-  // ----------------------------------------------------------
-  //  STAFF ACCOUNTANT  (Filled)
-  // ----------------------------------------------------------
+
+  // STAFF ACCOUNTANT (Filled)
   {
     slug:         "staff-accountant",
     area:         "Accounting",
