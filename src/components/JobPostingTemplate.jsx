@@ -212,7 +212,7 @@ const JobPostingTemplate = () => {
         <p className="ja-footer__text">
           <HTML text={applyNote ?? DEFAULT_APPLY_NOTE} />
         </p>
-        <a className="ja-apply-btn" href="mailto:info@talentumunion.com">
+        <a className="ja-apply-btn" href="mailto:talentumunion@gmail.com">
           Apply
         </a>
       </div>
